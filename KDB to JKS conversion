@@ -1,0 +1,6 @@
+KDB to JKS conversion:
+
+./runmqckm -keydb -create -db /tmp/ssl/target.jks -type jks
+./runmqckm -cert -import -db /tmp/ssl/key.kdb -type cms -target /tmp/ssl/target.jks -target_type jks -stashed
+./runmqckm -cert -list -db /tmp/ssl/key.kdb -type cms -stashed
+./runmqckm -cert -list -db /tmp/ssl/target.jks -type jks
